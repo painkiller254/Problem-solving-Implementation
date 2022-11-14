@@ -1,0 +1,12 @@
+def getMoneySpent(keyboards, drives, b):
+    res = 0
+    
+    for i in keyboards:
+        for j in drives:
+            if i + j <= b and i + j > res:
+                res = i + j
+                
+            if res == 0:
+                res = -1
+                
+    return res
