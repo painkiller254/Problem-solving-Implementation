@@ -1,0 +1,12 @@
+def sockMerchant(n, ar):
+    # Write your code here
+    pairs = 0
+    my_set = set(ar)
+    
+    for i in my_set:
+        match = ar.count(i)
+        same = match // 2
+        
+        pairs += same
+        
+    return pairs
