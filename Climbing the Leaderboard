@@ -1,0 +1,5 @@
+from bisect import bisect_right as br
+def climbingLeaderboard(ranked, player):
+    ranked= sorted(set(ranked))
+    grades= list(range(len(ranked)+1,0,-1))
+    return [(grades[br(ranked, i)]) for i in player]
