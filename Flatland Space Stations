@@ -1,0 +1,10 @@
+def flatlandSpaceStations(n, c):
+    c = sorted(c)
+    max_d = max(c[0], n - c[-1] -1)
+    last_city = c[0] 
+    for i in range(len(c)):
+        distance = (c[i] - last_city) //2 
+        max_d  = max(max_d, distance)
+        last_city = c[i]
+    return max_d
+ 
