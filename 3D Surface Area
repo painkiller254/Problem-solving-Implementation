@@ -1,0 +1,10 @@
+def surfaceArea(A):
+    res = 0
+    for i in range(len(A)):
+        for j in range(len(A[0])):
+            res += 2 + A[i][j] * 4
+            if i - 1 >= 0:
+                res -= 2 * min(A[i][j], A[i-1][j])
+            if j - 1 >= 0:
+                res -= 2 * min(A[i][j - 1], A[i][j])
+    return res
